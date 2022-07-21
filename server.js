@@ -14,7 +14,14 @@ const PORT = process.env.PORT || 3001;
 connectToDB();
 
 // setting up an empty GET Route
-
+app.get('/', (req, res) => {
+    res.send('Portfolio Updater API is working');
+})
 
 // Starting Server on PORT
-app.listen(PORT, () => console.log("Server started on PORT Number: " + PORT));
+// remove in prod
+// app.listen(PORT, () => console.log("Server started on PORT Number: " + PORT));
+
+
+// remove in dev
+module.exports = app
