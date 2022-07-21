@@ -26,3 +26,5 @@ router.post('/' , async (req, res) => {
       .json({ message: "Some error occurred while adding projects! 🔴" });
     }
 })
+
+module.exports = router
