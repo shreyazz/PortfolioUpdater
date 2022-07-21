@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const projectSchema = mongoose.Schema({
     title: {
         type: String,
-        required: ture
+        required: true
     },
     description: {
         type: String,
@@ -23,8 +23,6 @@ const projectSchema = mongoose.Schema({
     repoLink: {
         type: String
     }
-},{
-    collection: 'ProjectsDB'
 })
 
 

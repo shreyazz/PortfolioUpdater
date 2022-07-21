@@ -14,9 +14,10 @@ const PORT = process.env.PORT || 3001;
 connectToDB();
 
 
-// 
+// middlewares for routes
 
-app.use('/api/', require('./routes/addProject'));
+app.use('/api/addProject', require('./routes/addProject'));
+app.use('/api/getProjects', require('./routes/getProjects'));
 
 // setting up an empty GET Route
 app.get('/', (req, res) => {
