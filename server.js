@@ -13,6 +13,11 @@ const PORT = process.env.PORT || 3001;
 // connection to the DB
 connectToDB();
 
+
+// 
+
+app.use('/api/', require('./routes/addProject'));
+
 // setting up an empty GET Route
 app.get('/', (req, res) => {
     res.send('Portfolio Updater API is working');
