@@ -42,7 +42,7 @@ const AddProjects = () => {
       "content-type": "application/json",
     };
     axios
-      .post("http://localhost:8080/api/addProject", projectData, {
+      .post("https://portfolio-updater.vercel.app/api/addProject", projectData, {
         headers,
       })
       .then((response) => {

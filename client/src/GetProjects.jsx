@@ -11,14 +11,14 @@ const GetProjects = () => {
   const [projects, setProjects] = useState([]);
   useEffect(() => {
     const getProjects = async () => {
-      const projectsRes = await axios("http://localhost:8080/api/getProjects");
+      const projectsRes = await axios("https://portfolio-updater.vercel.app/api/getProjects");
       setProjects(projectsRes.data.projects);
     };
     getProjects();
   }, []);
   const deleteProject = async (title) => {
     console.log(title)
-    const deleteRes = await axios.delete('http://localhost:8080/api/deleteProject', { data: { title: title }});
+    const deleteRes = await axios.delete('https://portfolio-updater.vercel.app/api/deleteProject', { data: { title: title }});
     console.log(deleteRes)
   }
   return (
