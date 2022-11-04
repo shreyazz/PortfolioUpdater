@@ -18,6 +18,7 @@ connectToDB();
 
 app.use('/api/addProject', require('./routes/addProject'));
 app.use('/api/getProjects', require('./routes/getProjects'));
+app.use('/api/deleteProject', require('./routes/deleteProject'));
 
 // setting up an empty GET Route
 app.get('/', (req, res) => {
@@ -26,7 +27,7 @@ app.get('/', (req, res) => {
 
 // Starting Server on PORT
 // remove in prod
-// app.listen(PORT, () => console.log("Server started on PORT Number: " + PORT));
+app.listen(PORT, () => console.log("Server started on PORT Number: " + PORT));
 
 
 // remove in dev

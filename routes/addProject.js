@@ -2,22 +2,17 @@ const express = require("express");
 const router = express.Router();
 const ProjectSchema = require("../model/project.model");
 router.post("/", async (req, res) => {
-  const { title, description, image, workInProgress, useLink, repoLink } =
-    req.body;
+  const { title, description, icon, workInProgress, useLink, repoLink } = req.body;
   try {
-    // if (!title || !description || !image || !workInProgress|| !useLink || !repoLink) {
-    //     return res
-    //       .status(422)
-    //       .json({ message: "Please fill all the details 🔴 " });
-    //   }
     const project = await ProjectSchema.findOne({ title: title });
+    console.log(req.body)
     if (project) {
       return res.status(409).json({ message: "A similar project exists! 🔴 " });
     }
     const newProject = await ProjectSchema.create({
       title,
       description,
-      image,
+      icon,
       workInProgress,
       useLink,
       repoLink,
@@ -31,7 +26,7 @@ router.post("/", async (req, res) => {
   } catch (error) {
     return res
       .status(401)
-      .json({ message: "Some error occurred while adding projects! 🔴 " });
+      .json({ message: "Some error occurred while adding projects! 🔴 ", error: error });
   }
 });
 

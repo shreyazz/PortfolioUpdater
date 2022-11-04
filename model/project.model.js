@@ -9,7 +9,7 @@ const projectSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    image: {
+    icon: {
         type: String,
         required: true
     },

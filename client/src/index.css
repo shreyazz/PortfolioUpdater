@@ -8,3 +8,20 @@ body {
   color: white;
 }
 
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.prev-img {
+  width: 260px;
+  border-radius: 0.2rem;
+}
+
+
+.card-wrapper{
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: start;
+}
