@@ -1,7 +1,7 @@
 # Portfolio Updater
 
 ## Idea 💡
-I have a [personal portfolio](https://shreyazz-dev.online/) in which I have a projects section. Adding a new project in the portfolio is a tedious task, so to make it easy and less boring, I am making a small web app which let's me add a new project in just one click. 
+I have a [personal portfolio](https://shreyazz-dev.online/) in which I have severak projects. Adding a new project in the portfolio is a tedious task, so to make it easy and less boring, I made a small web app that let's me add a new project in just one click. 
 
 ## Tech Used ⚙️
 - NodeJS
